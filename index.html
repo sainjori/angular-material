@@ -14,7 +14,7 @@
 	</head>
 	<body ng-app="MaterialApp" layout="column" ng-controller="UserController as ul">
 		 <md-toolbar layout="row" >
-		  <md-button class="menu" hide-gt-sm  ng-click="ul.toggleList()" >
+		  <md-button class="menu" aria-label="Show User List" hide-gt-sm  ng-click="ul.toggleList()" >
             <md-icon md-svg-icon="menu" ></md-icon>
         </md-button>
 	      <h1>Angular Material - Starter App</h1>
@@ -26,7 +26,7 @@
 			      <md-list>
 			        <!-- List item #1 -->
 			        <md-list-item ng-repeat="u in ul.users">
-			             <md-button ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
+			             <md-button aria-label="Show User List" ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
 			              <md-icon md-svg-icon="{{u.avatar}}" class="avatar"></md-icon>
 			              {{u.name}} 
 			            </md-button>
@@ -42,7 +42,7 @@
 			      <h2>{{ul.selected.name}}</h2>
 			      <p>{{ul.selected.content}}</p>
 
-			       <md-button class="share" md-no-ink ng-click="ul.makeContact(ul.selected)">
+			       <md-button class="share" aria-label="Share with {{ ul.selected.name }}" md-no-ink ng-click="ul.makeContact(ul.selected)">
 				    <md-icon md-svg-icon="share"></md-icon>
 				  </md-button>
 		   </md-content>
@@ -53,8 +53,11 @@
 	    <script src="app/src/users/UserService.js"></script>
 		<script> angular.module('MaterialApp', ['ngMaterial', 'users'])
 
-				.config(function( $mdIconProvider ){
+				.config(function( $mdIconProvider, $mdThemingProvider ){
           			// Register the user `avatar` icons
+          			$mdThemingProvider.theme('default')
+              		.primaryPalette('blue')
+              			.accentPalette('red');
           			$mdIconProvider.icon("share", "./app/assets/svg/share.svg", 24);
           			$mdIconProvider.icon("menu", "./app/assets/svg/menu.svg", 24);
 	          		$mdIconProvider.defaultIconSet("./app/assets/svg/avatars.svg", 128);
