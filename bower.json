@@ -1,0 +1,18 @@
+{
+  "name": "lidl-angular-material",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Bertan Yasar <bertan.yasar@k-tc.de>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
