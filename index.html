@@ -10,45 +10,11 @@
 		<script src="bower_components/angular-animate/angular-animate.js"> </script>
 		<script src="bower_components/angular-aria/angular-aria.js"> </script>
 		<script src="bower_components/angular-material/angular-material.js"> </script>
-		<link rel="stylesheet" type="text/css" href="app/assets/app.css">
-	</head>
-	<body ng-app="MaterialApp" layout="column" ng-controller="UserController as ul">
-		 <md-toolbar layout="row" >
-		  <md-button class="menu" aria-label="Show User List" hide-gt-sm  ng-click="ul.toggleList()" >
-            <md-icon md-svg-icon="menu" ></md-icon>
-        </md-button>
-	      <h1>Angular Material - Starter App</h1>
-	    </md-toolbar>
-	    <div flex layout="row">
-
-	        <!-- Container #3 -->
-	       <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
-			      <md-list>
-			        <!-- List item #1 -->
-			        <md-list-item ng-repeat="u in ul.users">
-			             <md-button aria-label="Show User List" ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
-			              <md-icon md-svg-icon="{{u.avatar}}" class="avatar"></md-icon>
-			              {{u.name}} 
-			            </md-button>
-			        </md-list-item>
-
-			      </md-list>
-		    </md-sidenav>
-
-		        <!-- Container #4 -->
-	       <md-content flex id="content">
-		      <!-- User details sample -->
-			       <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-			      <h2>{{ul.selected.name}}</h2>
-			      <p>{{ul.selected.content}}</p>
-
-			       <md-button class="share" aria-label="Share with {{ ul.selected.name }}" md-no-ink ng-click="ul.makeContact(ul.selected)">
-				    <md-icon md-svg-icon="share"></md-icon>
-				  </md-button>
-		   </md-content>
-
-	    </div>
-	    <script src="app/src/users/Users.js"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="app/assets/app.css"> -->
+		<style type="text/css">
+			
+		</style>
+		 <script src="app/src/users/Users.js"></script>
 	    <script src="app/src/users/UserController.js"></script>
 	    <script src="app/src/users/UserService.js"></script>
 		<script> angular.module('MaterialApp', ['ngMaterial', 'users'])
@@ -63,5 +29,98 @@
 	          		$mdIconProvider.defaultIconSet("./app/assets/svg/avatars.svg", 128);
       			});
 		 </script>
-	</body>
+		 <style type="text/css">
+		 	body[ng-cloak] {
+  display:none;
+}
+body {
+    background-color: #FEEBC8;
+}
+div[flex="30"] {
+  background-color: #DFDFDF;  
+}
+
+section[flex="40"] {
+  background-color: #D4E5FA;
+}
+section[flex="70"] {
+  background-color: #E8FCD6;
+}
+section[flex="20"] {
+ background-color: #FFD5E3;
+}
+section[flex=""] {
+ background-color: rgba(0, 128, 0, 0.35);
+}
+
+
+/* Important to set height for column layout */
+.boxWithHeight {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.a, section {
+  border: 5px solid rgba(85, 97, 85, 0.27);
+  margin: 5px;  
+}
+
+section {
+  background-color: #dedede;
+}
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+*/
+		 </style>
+	</head>
+<body layout="row" ng-app="MaterialApp" class="icondemoFontIconsWithLigatures" ng-cloak>
+
+  <div flex="30" layout="column" class="boxWithHeight" layout-padding>
+    
+    <section flex="10">
+    	<h1>LCL MasterData</h1>
+    </section>
+    <section flex>
+    	<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
+			      <md-list>
+			        <!-- List item #1 -->
+			        <md-list-item ng-repeat="u in ul.users">
+			             <md-button aria-label="Show User List" ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
+			              <md-icon md-svg-icon="{{u.avatar}}" class="avatar"></md-icon>
+			              {{u.name}} 
+			            </md-button>
+			        </md-list-item>
+
+			      </md-list>
+		    </md-sidenav>
+    </section>
+  </div>
+  <div flex layout="column" class="boxWithHeight" layout-padding>
+    <section flex="10">
+    	<h1>LCL MasterData</h1>
+    </section>
+    <section flex>
+    
+    	 <md-content flex id="content">
+		      <!-- User details sample -->
+			       <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
+			      <h2>{{ul.selected.name}}</h2>
+			      <p>{{ul.selected.content}}</p>
+
+			       <md-button class="share" aria-label="Share with {{ ul.selected.name }}" md-no-ink ng-click="ul.makeContact(ul.selected)">
+				    <md-icon md-svg-icon="share"></md-icon>
+				  </md-button>
+		   </md-content>
+    </section>
+   
+  </div>
+
+</body>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
 </html>
