@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Testing Angular Material</title>
-</head>
-<body>
+	<head>
+		<title>
+		Testing Angular Material
+		</title>
+		<!-- <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+		<link 	href="bower_components/angular-material/angular-material.css" rel="stylesheet" type="text/css">
+		<script src="bower_components/angular/angular.min.js"> </script>
+		<script src="bower_components/angular-animate/angular-animate.js"> </script>
+		<script src="bower_components/angular-aria/angular-aria.js"> </script>
+		<script src="bower_components/angular-material/angular-material.js"> </script>
+		<link rel="stylesheet" type="text/css" href="app/assets/app.css">
+	</head>
+	<body ng-app="MaterialApp" layout="column" ng-controller="UserController as ul">
+		 <md-toolbar layout="row" >
+		  <md-button class="menu" hide-gt-sm  ng-click="ul.toggleList()" >
+            <md-icon md-svg-icon="menu" ></md-icon>
+        </md-button>
+	      <h1>Angular Material - Starter App</h1>
+	    </md-toolbar>
+	    <div flex layout="row">
 
-</body>
+	        <!-- Container #3 -->
+	       <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left">
+			      <md-list>
+			        <!-- List item #1 -->
+			        <md-list-item ng-repeat="u in ul.users">
+			             <md-button ng-click="ul.selectUser(u)" ng-class="{'selected' : u === ul.selected }">
+			              <md-icon md-svg-icon="{{u.avatar}}" class="avatar"></md-icon>
+			              {{u.name}} 
+			            </md-button>
+			        </md-list-item>
+
+			      </md-list>
+		    </md-sidenav>
+
+		        <!-- Container #4 -->
+	       <md-content flex id="content">
+		      <!-- User details sample -->
+			       <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
+			      <h2>{{ul.selected.name}}</h2>
+			      <p>{{ul.selected.content}}</p>
+
+			       <md-button class="share" md-no-ink ng-click="ul.makeContact(ul.selected)">
+				    <md-icon md-svg-icon="share"></md-icon>
+				  </md-button>
+		   </md-content>
+
+	    </div>
+	    <script src="app/src/users/Users.js"></script>
+	    <script src="app/src/users/UserController.js"></script>
+	    <script src="app/src/users/UserService.js"></script>
+		<script> angular.module('MaterialApp', ['ngMaterial', 'users'])
+
+				.config(function( $mdIconProvider ){
+          			// Register the user `avatar` icons
+          			$mdIconProvider.icon("share", "./app/assets/svg/share.svg", 24);
+          			$mdIconProvider.icon("menu", "./app/assets/svg/menu.svg", 24);
+	          		$mdIconProvider.defaultIconSet("./app/assets/svg/avatars.svg", 128);
+      			});
+		 </script>
+	</body>
 </html>
