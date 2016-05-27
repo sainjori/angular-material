@@ -3,6 +3,6 @@
     "files": ["./**/*.{html,htm,css,js}"],
     "server":
     {
-        "baseDir": "./"
+        "baseDir": "./app"
     }
 }
