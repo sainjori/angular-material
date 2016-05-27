@@ -1,7 +1,4 @@
-angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.controllers',
-    'ngAnimate',
-    'ui.router',
-    'ngAria'])
+angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.controllers', 'ngAnimate', 'ui.router', 'ngAria'])
     .config(function($mdIconProvider, $mdThemingProvider)
     {
         $mdThemingProvider.definePalette('amazingPaletteName',
@@ -67,7 +64,7 @@ angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.co
 
                         'content@home':
                         {
-                            templateUrl: 'beers.ipa.view.html'
+                            templateUrl: 'src/partials/beers.ipa.view.html'
                         }
                     }
                 })
@@ -80,7 +77,7 @@ angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.co
 
                         'content@home':
                         {
-                            templateUrl: 'beers.porters.view.html'
+                            templateUrl: 'src/partials/beers.porters.view.html'
                         }
                     }
                 })
@@ -93,7 +90,7 @@ angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.co
 
                         'content@home':
                         {
-                            templateUrl: 'beers.wheat.view.html'
+                            templateUrl: 'src/partials/beers.wheat.view.html'
                         }
                     }
                 })

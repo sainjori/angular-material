@@ -1,4 +1,4 @@
-<div layout="row">
+
   
   <md-sidenav class="md-sidenav-left md-whiteframe-1dp" md-component-id="left"
               md-is-locked-open="$mdMedia('gt-sm')">
@@ -24,7 +24,22 @@
     </md-content>
   </md-sidenav>
   
-  <md-content layout layout-fill layout-padding>
+  <md-content layout-fill layout-padding>
+    <md-toolbar layout="row">
+       <div class="md-toolbar-tools">
+        <md-button class="menu" aria-label="Show User List"  ng-click="ul.toggleList()" >
+        <md-icon md-svg-icon="menu" ></md-icon>
+        </md-button>
+        <h3>Stammdaten > Orga-Struktur</h3>
+        <span flex></span>
+        <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+                 <ng-md-icon icon="search"></ng-md-icon>
+
+                
+              </md-button>
+              <input type="" name="">
+              
+      </div>
+      </md-toolbar>
     <ui-view name="content"></ui-view>
   </md-content>
-</div>

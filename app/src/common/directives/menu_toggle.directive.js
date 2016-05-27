@@ -20,17 +20,17 @@ angular.module('common.services', []);
 
                 sections.push(
                 {
-                    name: 'Beers',
+                    name: 'Stammdaten',
                     type: 'toggle',
                     pages: [
                         {
-                            name: 'IPAs',
+                            name: 'Organisations-Struktur',
                             type: 'link',
                             state: 'home.beers.ipas',
                             icon: 'fa fa-group'
           },
                         {
-                            name: 'Porters',
+                            name: 'Parameter',
                             state: 'home.beers.porters',
                             type: 'link',
                             icon: 'fa fa-map-marker'
@@ -45,27 +45,21 @@ angular.module('common.services', []);
 
                 sections.push(
                 {
-                    name: 'Munchies',
+                    name: 'Benutzerverwaltung',
                     type: 'toggle',
                     pages: [
                         {
-                            name: 'Cheetos',
+                            name: 'Benutzer',
                             type: 'link',
                             state: 'munchies.cheetos',
                             icon: 'fa fa-group'
           },
                         {
-                            name: 'Banana Chips',
+                            name: 'Rollen',
                             state: 'munchies.bananachips',
                             type: 'link',
                             icon: 'fa fa-map-marker'
-          },
-                        {
-                            name: 'Donuts',
-                            state: 'munchies.donuts',
-                            type: 'link',
-                            icon: 'fa fa-map-marker'
-            }]
+          }]
                 });
 
                 var self;
@@ -81,7 +75,6 @@ angular.module('common.services', []);
                     {
                         return self.openedSection === section;
                     },
-
                     selectPage: function(section, page)
                     {
                         page && page.url && $location.path(page.url);
