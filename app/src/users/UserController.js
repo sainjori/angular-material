@@ -44,6 +44,7 @@
          */
         function toggleUsersList()
         {
+            console.log("aaa");
             $mdSidenav('left').toggle();
         }
 

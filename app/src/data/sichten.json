@@ -1,0 +1,12 @@
+[
+    {
+        name: "Vertriebs-Organisationsstruktur",
+        short: "vertrieb"
+},
+    {
+        name: "Marketing-Organisationsstruktur",
+        short: "marketing"
+}
+
+
+]

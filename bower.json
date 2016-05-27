@@ -18,6 +18,8 @@
   "dependencies": {
     "angular": "^1.5.5",
     "bootstrap": "^3.3.6",
-    "angular-material": "^1.0.9"
+    "angular-material": "^1.0.9",
+    "angular-material-icons": "^0.7.0",
+    "angular-ui-router": "^0.3.0"
   }
 }

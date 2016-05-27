@@ -1,6 +1,6 @@
 {
     "port": 8000,
-    "files": ["./**/*.{html,htm,css,js}"],
+    "files": ["./**/*.{html,htm,css,js,json}"],
     "server":
     {
         "baseDir": "./app"

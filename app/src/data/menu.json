@@ -1,0 +1,29 @@
+[
+    {
+        "id": 0,
+        "name": "Stammdaten",
+        "children": [
+            {
+                "name": "Organisations-Struktur",
+                "url": "lidl.layout.orga"
+        },
+            {
+                "name": "Parameter",
+                "url": "lidl.layout.parameter"
+        }]
+    },
+    {
+        "id": 1,
+        "name": "Benutzerverwaltung",
+        "children": [
+            {
+                "name": "Benutzer",
+                "url": "bla"
+        },
+            {
+                "name": "Rollen",
+                "url": "bla"
+
+        }]
+    }
+]

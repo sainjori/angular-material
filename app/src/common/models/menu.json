@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Beers",
+        "type": "toggle",
+        "pages": [
+            {
+                "name": "IPAs",
+                "type": "link",
+                "state": "home.beers.ipas",
+                "icon": "fa fa-group"
+          },
+            {
+                "name": "Porters",
+                "state": "home.beers.porters",
+                "type": "link",
+                "icon": "fa fa-map-marker"
+          },
+            {
+                "name": "Wheat",
+                "state": "home.beers.wheat",
+                "type": "link",
+                "icon": "fa fa-plus"
+            }]
+    },
+    {
+        "name": "Munchies",
+        "type": "toggle",
+        "pages": [
+            {
+                "name": "Cheetos",
+                "type": "link",
+                "state": "munchies.cheetos",
+                "icon": "fa fa-group"
+          },
+            {
+                "name": "Banana Chips",
+                "state": "munchies.bananachips",
+                "type": "link",
+                "icon": "fa fa-map-marker"
+          },
+            {
+                "name": "Donuts",
+                "state": "munchies.donuts",
+                "type": "link",
+                "icon": "fa fa-map-marker"
+            }]
+    }
+]
