@@ -1,5 +1,5 @@
 angular.module('MaterialApp')
-    .service('NavigationModel', function($http, $q)
+    .service('NavigationModelService', function($http, $q)
     {
 
         var model = this,
@@ -10,6 +10,7 @@ angular.module('MaterialApp')
 
         function extract(result)
         {
+
             return result.data;
         }
 

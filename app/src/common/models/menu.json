@@ -1,6 +1,6 @@
 [
     {
-        "name": "Beers",
+        "name": "Stammdaten",
         "type": "toggle",
         "pages": [
             {
@@ -23,7 +23,7 @@
             }]
     },
     {
-        "name": "Munchies",
+        "name": "Benutzerverwaltung",
         "type": "toggle",
         "pages": [
             {

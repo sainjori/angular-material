@@ -11,7 +11,7 @@
     
     <md-content role="navigation">
       <ul class="side-menu">
-        <li ng-repeat="section in vm.menu.sections" class="parent-list-item"
+        <li ng-repeat="section in sections" class="parent-list-item"
             ng-class="{'parentActive' : vm.isSectionSelected(section)}">
           <h2 class="menu-heading" ng-if="section.type === 'heading'"
               id="heading_{{ section.name | nospace }}">

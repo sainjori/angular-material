@@ -1,4 +1,4 @@
-angular.module('MaterialApp', ['ngMaterial', 'users', 'ngMdIcons', 'myMenuApp.controllers', 'ngAnimate', 'ui.router', 'ngAria'])
+angular.module('MaterialApp', ['ngMaterial', 'users', 'navigation', 'ngMdIcons', 'ngAnimate', 'ui.router', 'ngAria'])
     .config(function($mdIconProvider, $mdThemingProvider)
     {
         $mdThemingProvider.definePalette('amazingPaletteName',
