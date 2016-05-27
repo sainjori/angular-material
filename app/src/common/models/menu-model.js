@@ -1,5 +1,5 @@
 angular.module('MaterialApp')
-    .service('navService', function($http, $q)
+    .service('NavigationModel', function($http, $q)
     {
 
         var model = this,

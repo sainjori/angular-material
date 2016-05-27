@@ -69,6 +69,7 @@ angular.module('common.services', []);
 
                     toggleSelectSection: function(section)
                     {
+
                         self.openedSection = (self.openedSection === section ? null : section);
                     },
                     isSectionSelected: function(section)
@@ -77,6 +78,7 @@ angular.module('common.services', []);
                     },
                     selectPage: function(section, page)
                     {
+
                         page && page.url && $location.path(page.url);
                         self.currentSection = section;
                         self.currentPage = page;
@@ -162,7 +164,7 @@ angular.module('common.directives')
                     '</md-button>\n' +
                     '');
     }])
-        .directive('menuLink', function()
+        .directive('menuLink', function($mdSidenav)
         {
             return {
                 scope:
@@ -176,6 +178,7 @@ angular.module('common.directives')
 
                     $scope.focusSection = function()
                     {
+                        $mdSidenav('left').toggle();
                         // set flag to be used later when
                         // $locationChangeSuccess calls openPage()
                         controller.autoFocusContent = true;
